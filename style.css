@@ -36,9 +36,8 @@ input.search-box {
     border: 2px solid red;
 }
 
-.content {
+.container {
     width: 85%;
-    border: 2px solid purple;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -73,10 +72,21 @@ input.search-box {
 }
 
 .rating {
-    background-color: #FFC107;
+   
     color: #333;
     padding: 0.25em;
     border-radius: 0.25em;
     text-align: center;
     display: inline-block;
+}
+
+.orange{
+    background-color: #FFC107;
+}
+
+.green{
+    background-color: #4CC035;
+}
+.red{
+    background-color: #E42535;
 }
