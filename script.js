@@ -13,8 +13,7 @@ const search = document.querySelector("#search");
 
 const tagEle = document.querySelector("#tag");
 
-const genres = [
-  {
+const genres = [{
     id: 28,
     name: "Action",
   },
@@ -94,6 +93,7 @@ const genres = [
 
 let result;
 getMovies(API_URL);
+
 function getMovies(url) {
   fetch(url)
     .then((res) => res.json())
@@ -130,7 +130,7 @@ function showMovies(data) {
          </div>
          <div class="lan-rating">
              <p class="language">${original_language}</p>
-             <p class="rating ${ratingColor(vote_average)}">${vote_average}</p>
+             <p class="rating  ${ratingColor(vote_average)}">${vote_average}</p>
          </div>
         `;
 
@@ -164,6 +164,7 @@ form.addEventListener("submit", (e) => {
 
 setGenre();
 var selGenre = [];
+
 function setGenre() {
   tagEle.innerHTML = "";
   genres.forEach((genre) => {
@@ -257,3 +258,17 @@ function mobileNavigation() {
     x.style.display = "block";
   }
 }
+
+
+//====== Dark mode =======
+
+function addDarkmodeWidget() {
+  new Darkmode().showWidget();
+}
+window.addEventListener('load', addDarkmodeWidget);
+
+// const options = {
+//   label: '🌓',
+// }
+// const darkmode = new Darkmode(options);
+// darkmode.showWidget();
