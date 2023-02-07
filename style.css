@@ -215,8 +215,8 @@ input.search-box {
 /*-------------  Dark Mode ----------------*/
 
 
-.darkmode-layer, .darkmode-toggle {
-  z-index: 500;
+button.darkmode-toggle--white.darkmode-toggle {
+    z-index: 500;
 }
 
 /* for ignoring the images*/
