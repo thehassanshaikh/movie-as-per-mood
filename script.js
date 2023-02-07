@@ -13,7 +13,8 @@ const search = document.querySelector("#search");
 
 const tagEle = document.querySelector("#tag");
 
-const genres = [{
+const genres = [
+  {
     id: 28,
     name: "Action",
   },
@@ -130,7 +131,7 @@ function showMovies(data) {
          </div>
          <div class="lan-rating">
              <p class="language">${original_language}</p>
-             <p class="rating  ${ratingColor(vote_average)}">${vote_average}</p>
+             <p class="rating ${ratingColor(vote_average)}">${vote_average}</p>
          </div>
         `;
 
@@ -258,17 +259,3 @@ function mobileNavigation() {
     x.style.display = "block";
   }
 }
-
-
-//====== Dark mode =======
-
-function addDarkmodeWidget() {
-  new Darkmode().showWidget();
-}
-window.addEventListener('load', addDarkmodeWidget);
-
-// const options = {
-//   label: '🌓',
-// }
-// const darkmode = new Darkmode(options);
-// darkmode.showWidget();
