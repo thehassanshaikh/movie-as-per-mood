@@ -1,101 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movies as per your mood</title>
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <!-- ------------- Navigation Bar  --------- -->
-    <nav class="nav-bar">
-      <div>
-        <a href="javascript:void(0);" class="icon" onclick="mobileNavigation()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <!-- <h2 class="logo">Movie as per your Mood</h2> -->
-        <img
-          src="assets/masp-logo.png"
-          alt="masm Logo"
-          class="logo"
-          srcset=""
-        />
-      </div>
-      <!-- search bar without icon-->
-      <form action="" id="form" class="nosubmit">
-        <input
-          class="nosubmit"
-          type="text"
-          class="search-box"
-          id="search"
-          placeholder="Movie, Actor, Category"
-        />
-      </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies as per your mood</title>
 
-      <!-- search bar with icon -->
+  <!-- Dark mode js-->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
-      <!-- <form class="nosubmit">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body class="darkmode--activated">
+  <!-- ------------- Navigation Bar  --------- -->
+  <nav class="nav-bar">
+    <div>
+      <a href="javascript:void(0);" class="icon" onclick="mobileNavigation()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!-- <h2 class="logo">Movie as per your Mood</h2> -->
+      <img src="https://i.ibb.co/7tBFRdw/mapm-logo-orange.png" alt="masm Logo" class="logo" srcset="" />
+    </div>
+    <!-- search bar without icon-->
+    <form action="" id="form" class="nosubmit">
+      <input class="nosubmit" type="text" class="search-box" id="search" placeholder="Movie, Actor, Category" />
+    </form>
+
+    <!-- search bar with icon -->
+
+    <!-- <form class="nosubmit">
         <input class="nosubmit" type="search" placeholder="Search..." />
       </form> -->
 
-      <!-- empty div for centering the navigation bar -->
-      <div></div>
-    </nav>
+    <!-- empty div for centering the navigation bar -->
+    <div></div>
+  </nav>
 
-    <div class="main">
-      <!-- ------------- Side Bar  ----------- -->
-      <sidebar class="sidebar">
-        <div class="category-container" id="tag">
-          <!-- <div class="tag">Action</div>-->
-        </div>
-      </sidebar>
+  <div class="main">
+    <!-- ------------- Side Bar  ----------- -->
+    <sidebar class="sidebar">
+      <div class="category-container" id="tag">
+        <!-- <div class="tag">Action</div>-->
+      </div>
+    </sidebar>
 
-      <!-- ------------- Main content  ----------- -->
-      <div class="container"></div>
+    <!-- ------------- Main content  ----------- -->
+    <div class="container"></div>
 
-      <!----------- Modal content -------->
+    <!----------- Modal content -------->
 
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="makeOut(this)">&times;</span>
-          <div class="movie-card">
-            <div class="movie-image">
-              <img src="" id="image" alt="" />
-            </div>
-            <div class="movie-details">
-              <h3 id="title"></h3>
-              <h3 id="rating"></h3>
-              <h3 id="language"></h3>
-              <h3 id="genre"></h3>
-              <p id="description"></p>
-            </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="makeOut(this)">&times;</span>
+        <div class="movie-card">
+          <div class="movie-image">
+            <img src="" id="image" alt="" />
+          </div>
+          <div class="movie-details">
+            <h3 id="title"></h3>
+            <h3 id="rating"></h3>
+            <h3 id="language"></h3>
+            <h3 id="genre"></h3>
+            <p id="description"></p>
+          </div>
 
-            <!-- price and add to cart -->
-            <div class="Booking" id="booking">
-              <!-- <h3>Rs. <span id="price"></span></h3>
+          <!-- price and add to cart -->
+          <div class="Booking" id="booking">
+            <!-- <h3>Rs. <span id="price"></span></h3>
                   <button>Book Tickets</button> -->
-              <!-- <div id="ticket-container">
+            <!-- <div id="ticket-container">
                       <p id="ticket-price">$<span id="price"></span></p>
                       <button id="buy-button">Buy Ticket</button>
                  </div> -->
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
