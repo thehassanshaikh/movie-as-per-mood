@@ -43,6 +43,10 @@ h2.logo {
   font-family: ui-monospace;
 }
 
+img.logo {
+  width: 70%;
+}
+
 input.search-box {
   padding: 10px;
   color: white;
@@ -107,13 +111,16 @@ input.search-box {
 
 .orange {
   background-color: #ffc107;
+  isolation: isolate;
 }
 
 .green {
   background-color: #4cc035;
+  isolation: isolate;
 }
 .red {
   background-color: #e42535;
+  isolation: isolate;
 }
 
 /*---------- Side bar -------- */
@@ -124,7 +131,7 @@ input.search-box {
 }
 .tag {
   /* background: aquamarine; */
-
+  isolation: isolate;
   margin: 5px;
   padding: 0.5rem;
   border-radius: 5px;
@@ -132,11 +139,12 @@ input.search-box {
 }
 
 .tag:hover {
-  background-color: #d3d3d36b;
+ 
+  background-color: #FF9781;
 }
 
 .tag.highlighted {
-  background-color: red;
+  background-color: #ff5733;
   color: white;
 }
 
@@ -202,6 +210,18 @@ input.search-box {
   display: grid;
 
   width: 100%;
+}
+
+/*-------------  Dark Mode ----------------*/
+
+
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
+
+/* for ignoring the images*/
+.darkmode--activated img {
+  filter: invert(1);
 }
 
 /*------ For table devie ---------*/
