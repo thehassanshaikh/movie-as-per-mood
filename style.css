@@ -218,17 +218,6 @@ input.search-box {
   width: 100%;
 }
 
-/*-------------  Dark Mode ----------------*/
-
-button.darkmode-toggle--white.darkmode-toggle {
-  z-index: 500;
-}
-
-/* for ignoring the images*/
-.darkmode--activated img {
-  filter: invert(0);
-}
-
 /*------ For table devie ---------*/
 @media (min-width: 769px) and (max-width: 1200px) {
   .card {
