@@ -124,7 +124,7 @@ function showMovies(data) {
         <div class="img-container">
              <img class="card-img" src="${
                IMG_URL + poster_path
-             }" alt="${title}" onclick="makeMove(this,${id})">
+             }" alt="${title}" onclick="popUp(this,${id})">
          </div>
          <div class="title">
             <h2 class="mov-title">${title}</h2>
@@ -211,28 +211,29 @@ function highlightGenre() {
 
 // modal script
 
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
+const modal= document.querySelector(".pop-modal");
+const popClose = document.querySelector(".pop-close")
 
-function makeMove(url, id) {
+function popUp(url, id) {
   modal.style.display = "block";
   console.log(result);
   for (let item of result) {
     if (item.id === id) {
-      document.getElementById("image").src = IMG_URL + item.poster_path;
+      document.querySelector(".pop-img").src = IMG_URL + item.poster_path;
 
-      document.getElementById("title").innerText = item.title;
-      document.getElementById("rating").innerText = item.vote_average + "/10";
-      document.getElementById("language").innerText = item.original_language;
+      document.querySelector(".pop-title").innerText = item.title;
+      document.querySelector("#rating-num").innerText = item.vote_average + "/10";
+      document.querySelector(".pop-languages").innerText = item.original_language;
 
-      document.getElementById("description").innerText = item.overview;
+      document.querySelector(".pop-dec").innerText = item.overview;
       let price = Math.floor(250 + Math.random() * 300);
-      document.querySelector("#booking").innerHTML = `
-           <div id="ticket-container">
-                    <p id="ticket-price"><span id="price">₹ &nbsp${price}</span></p>
-                    <button id="buy-button">Buy Ticket</button>
-                </div>
-                </div>`;
+      document.querySelector(".price-num").innerHTML = price;
+      // `
+      //      <div id="ticket-container">
+      //               <p id="ticket-price"><span id="price">₹ &nbsp${price}</span></p>
+      //               <button id="buy-button">Buy Ticket</button>
+      //           </div>
+      //           </div>`;
       //    document.getElementById('price').innerText=price;
       var genre = item.genre_ids;
       //    document.getElementById('genre').innerText=item.title;
@@ -246,9 +247,17 @@ function makeMove(url, id) {
   }
 }
 // When the user clicks on <span> (x), close the modal
-function makeOut() {
+popClose.onclick = ()=> {
   modal.style.display = "none";
 }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 // For mobile and Tablet navigation
 
