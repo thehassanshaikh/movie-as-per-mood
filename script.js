@@ -250,12 +250,15 @@ function makeOut() {
   modal.style.display = "none";
 }
 
-// For mobile navigation
-function mobileNavigation() {
-  let x = document.getElementById("tag");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+// For mobile and Tablet navigation
+
+const mobileIcon = document.querySelector(".menu-icon");
+const sidebar = document.querySelector(".sidebar");
+const movieContainer = document.querySelector(".container");
+
+mobileIcon.addEventListener('click',(e)=> {
+  e.preventDefault;
+  sidebar.classList.toggle("s-visible");
+  movieContainer.classList.toggle("s-hidden");
+
+})
