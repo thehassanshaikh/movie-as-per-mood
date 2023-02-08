@@ -18,10 +18,6 @@ nav.nav-bar {
   z-index: 1;
 }
 
-.icon {
-  display: none;
-}
-
 /* search icon */
 
 form.nosubmit {
@@ -34,9 +30,7 @@ input.nosubmit {
   border: 1px solid #555;
   width: 100%;
   padding: 9px 4px 9px 40px;
-  background: transparent
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
-    no-repeat 13px center;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
   border-radius: 15px;
   background-color: #272727;
   color: #ffff;
@@ -54,6 +48,12 @@ img.logo {
   width: 70%;
 }
 
+.menu-icon{
+  color: #fff;
+  font-size: 30px;
+  visibility: hidden;
+}
+
 input.search-box {
   padding: 10px;
   color: white;
@@ -67,6 +67,7 @@ input.search-box {
   padding-top: 90px;
   background-color: #000;
 }
+
 .sidebar {
   width: 15%;
   /* border: 2px solid grey; */
@@ -90,6 +91,7 @@ input.search-box {
   box-shadow: 0 1px 6px 1px rgb(255 255 255 / 25%);
   border-bottom: 2px solid #eb5333;
 }
+
 .card-img {
   width: 100%;
   border-radius: 10px;
@@ -125,6 +127,7 @@ input.search-box {
   background-color: #4cc035;
   isolation: isolate;
 }
+
 .red {
   background-color: #e42535;
   isolation: isolate;
@@ -136,6 +139,7 @@ input.search-box {
   /* padding: 10px 0 0 10px; */
   font-size: 16px;
 }
+
 .tag {
   margin: 5px;
   padding: 0.5rem;
@@ -157,17 +161,26 @@ input.search-box {
 /* /modal css/ */
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 50px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 50px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -200,11 +213,13 @@ input.search-box {
   align-items: center;
   justify-content: space-between;
 }
+
 .movie-card img {
   width: 100%;
   height: 50%;
   border-radius: 15px;
 }
+
 .movie-details {
   padding-left: 20px;
 }
@@ -229,9 +244,21 @@ input.search-box {
   .container {
     width: 100%;
   }
-  .sidebar {
+
+  .menu-icon{
+   visibility: visible;
+  }
+
+  .s-hidden {
     display: none;
   }
+
+  .s-visible{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
   .card {
     width: calc(33% - 20px);
   }
