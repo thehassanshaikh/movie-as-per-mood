@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="sumarry-section">
+                <h2 class="heading">Sumarry</h2>
+                <h4 class="movie-title" >Movie Name: <span id="movie-title">Black Adam</span></h4>
+                <h4 class="nmbr-tcks">Number of Tickets: <input type="number" id="number-of-tickets" value="1"></h4>
+                <h4 class="conv-fees">Convines Fees <span id="fees">1.87</span></h4>
+                <div class="total-container">
+                    <h2 class="total">Sub total is: <span id="total">350</span></h2>
+                </div>
+            </div>
+            <div class="payment-section">
+                <h2 class="heading">Sumarry</h2>
+                <form action="">
+                    <label for="f-name">First Name</label>
+                    <input type="text" name="f-name" id="f-name" class="checkout-form">
+
+                    <label for="l-name">Last Name</label>
+                    <input type="text" name="l-name" id="l-name" class="checkout-form"><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="checkout-form"><br>
+
+                    <label for="upi">UPI</label>
+                    <input type="radio" id="upi">
+
+                    <label for="debit-card">Debit Card</label>
+                    <input type="radio" id="debit-card">
+
+                    <label for="credit-card">Creadit Card</label>
+                    <input type="radio" id="credit-card">
+
+                    <div class="card-details">
+                        <label for="card-number">Card Number</label>
+                        <input type="number" name="" id="card-number">
+
+                        <label for="exp">Valid till</label>
+                        <input type="date" name="" id="valid-till">
+
+                        <label for="cvv">CVV</label>
+                        <input type="number" name="" id="cvv">
+
+                        <label for="Name-on-card">Card Number</label>
+                        <input type="text" name="Name-on-card" id="card-on-card">
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

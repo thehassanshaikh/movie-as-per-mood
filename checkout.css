@@ -1,0 +1,39 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+main{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10% 0;
+}
+
+
+.container {
+    display: flex;
+    padding: 2%;
+    border: 2px solid;
+}
+
+.sumarry-section, .payment-section {
+    /* padding: 2%; */
+    border: 2px solid;
+}
+
+h2.heading{
+    text-align: center;
+
+}
+.movie-title, .conv-fees, .nmbr-tcks{
+    font-weight: 400;
+}
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+}
