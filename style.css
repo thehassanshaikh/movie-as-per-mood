@@ -181,8 +181,9 @@ input.search-box {
   display: flex;
   align-content: center;
   padding: 20px;
-  width: 70%;
+  width: 45%;
   margin: auto;
+  box-shadow: rgb(255 255 255 / 10%) 0px 1px 4px 0px;
 }
 
 .pop-modal{
@@ -190,7 +191,7 @@ input.search-box {
 }
 
 .pop-img-con img {
-  width: 100%;
+  width: 200px;
   border-radius: 15px;
 }
 
@@ -230,7 +231,7 @@ button.pop-add-to-cart {
 
 .pop-close,
 .pop-close {
-color: #000;
+color: #FFF;
 text-decoration: none;
 cursor: pointer;
 }
