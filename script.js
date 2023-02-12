@@ -100,7 +100,7 @@ function getMovies(url) {
     .then((res) => res.json())
 
     .then((data) => {
-      console.log(data);
+      //console.log(data);
       showMovies(data.results);
       result = data.results;
     });
@@ -154,7 +154,7 @@ form.addEventListener("submit", (e) => {
 
   const searTerm = search.value;
 
-  console.log(searTerm);
+  //console.log(searTerm);
 
   if (searTerm) {
     getMovies(SRCH_URL + "&query=" + searTerm);
@@ -187,7 +187,7 @@ function setGenre() {
           selGenre.push(genre.id);
         }
       }
-      console.log(selGenre);
+      //console.log(selGenre);
       getMovies(API_URL + "&with_genres=" + encodeURI(selGenre.join(",")));
       highlightGenre();
     });
@@ -210,18 +210,18 @@ function highlightGenre() {
 }
 
 // modal script
-
 const modal= document.querySelector(".pop-modal");
 const popClose = document.querySelector(".pop-close")
 
 function popUp(url, id) {
   modal.style.display = "block";
-  console.log(result);
+  // console.log(result);
   for (let item of result) {
     if (item.id === id) {
       document.querySelector(".pop-img").src = IMG_URL + item.poster_path;
 
       document.querySelector(".pop-title").innerText = item.title;
+      //console.log(item.title);
       document.querySelector("#rating-num").innerText = item.vote_average + "/10";
       document.querySelector(".pop-languages").innerText = item.original_language;
 
@@ -235,14 +235,14 @@ function popUp(url, id) {
       //           </div>
       //           </div>`;
       //    document.getElementById('price').innerText=price;
+      document.querySelector("#booking").innerHTML = `<button class="pop-add-to-cart" id="buy-button">Book Tickets</button>`;
       var genre = item.genre_ids;
       //    document.getElementById('genre').innerText=item.title;
-
-      document
-        .getElementById("buy-button")
-        .addEventListener("click", function () {
-          window.location.href = `checkout.html?price=${price}&title=${title}`;
-        });
+     // console.log(item.title);
+      document.getElementById('buy-button').addEventListener("click", function() {
+        
+        window.location.href=`checkout.html?price=${price}&title=${item.title}`;
+      });
     }
   }
 }
