@@ -14,6 +14,7 @@
 </head>
 <body>
     <main>
+        <h2 class="heading">Checkout</h2>
         <div class="container">
             <div class="sumarry-section">
                 <h2 class="heading">Sumarry</h2>
@@ -36,15 +37,14 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" class="checkout-form"><br>
 
-                    <label for="upi">UPI</label>
-                    <input type="radio" id="upi">
-
-                    <label for="debit-card">Debit Card</label>
-                    <input type="radio" id="debit-card">
-
-                    <label for="credit-card">Creadit Card</label>
-                    <input type="radio" id="credit-card">
-
+                    <div class="payment-option">
+                        <label for="upi">UPI <input type="radio" name="pay-opt" id="upi"></label>
+                        
+                        <label for="debit-card">Debit Card  <input type="radio" name="pay-opt" id="debit-card"></label>
+                       
+                        <label for="credit-card">Creadit Card  <input type="radio" name="pay-opt" id="credit-card"></label>
+                    </div>
+                    
                     <div class="card-details">
                         <label for="card-number">Card Number</label>
                         <input type="number" name="" id="card-number">
