@@ -6,63 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link rel="stylesheet" href="checkout.css">
-    <!-- google font -->
+    <script src="checkout.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/fevicon.png">
+     <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
     rel="stylesheet" />
+
 </head>
 <body>
-    <main>
-        <h2 class="heading">Checkout</h2>
-        <div class="container">
-            <div class="sumarry-section">
-                <h2 class="heading">Sumarry</h2>
-                <h4 class="movie-title" >Movie Name: <span id="movie-title">Black Adam</span></h4>
-                <h4 class="nmbr-tcks">Number of Tickets: <input type="number" id="number-of-tickets" value="1"></h4>
-                <h4 class="conv-fees">Convines Fees <span id="fees">1.87</span></h4>
-                <div class="total-container">
-                    <h2 class="total">Sub total is: <span id="total">350</span></h2>
-                </div>
+    <!-- <div class="back-button">
+        <a href="index.html"><button id="back">Back</button></a>
+    </div> -->
+    <h2>Checkout</h2>
+    <main class="main">
+
+        <div class="summary">
+            <h3>Summary</h3>
+            <div class="movie-name" id="movie-name"></div>
+            <div class="price">
+                <div>Classic Ticket </div>
+                <div id="ticket-price">&#8377;250</div>
             </div>
-            <div class="payment-section">
-                <h2 class="heading">Sumarry</h2>
-                <form action="">
-                    <label for="f-name">First Name</label>
-                    <input type="text" name="f-name" id="f-name" class="checkout-form">
-
-                    <label for="l-name">Last Name</label>
-                    <input type="text" name="l-name" id="l-name" class="checkout-form"><br>
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" class="checkout-form"><br>
-
-                    <div class="payment-option">
-                        <label for="upi">UPI <input type="radio" name="pay-opt" id="upi"></label>
-                        
-                        <label for="debit-card">Debit Card  <input type="radio" name="pay-opt" id="debit-card"></label>
-                       
-                        <label for="credit-card">Creadit Card  <input type="radio" name="pay-opt" id="credit-card"></label>
-                    </div>
-                    
-                    <div class="card-details">
-                        <label for="card-number">Card Number</label>
-                        <input type="number" name="" id="card-number">
-
-                        <label for="exp">Valid till</label>
-                        <input type="date" name="" id="valid-till">
-
-                        <label for="cvv">CVV</label>
-                        <input type="number" name="" id="cvv">
-
-                        <label for="Name-on-card">Card Number</label>
-                        <input type="text" name="Name-on-card" id="card-on-card">
-
-                        <button type="submit" class="submit-btn">Submit</button>
-                    </div>
-                </form>
+            <div class="ticketCount">
+                <label for="number-of-ticket">Number of Tickets</label>
+                <input type="number" value="1" id="number-of-ticket" min="1" max="100" onkeyup="getAmount()" required>
+            </div>
+            <div class="fee">
+                <div>Convenience Fee</div>
+                <div>&#8377;<span id="fee">0</span></div>
+            </div>
+            <div class="total">
+                <div>Sub total</div>
+                <div>&#8377;<span id="subtotal">0</span></div>
             </div>
         </div>
+        <div class="paymentMethod">
+            <form action="index.html" onsubmit="alert('Booking Movies Ticket');">
+                <h3>Payment Info</h3>
+                <div id="inputItem">
+                    <div id="item">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="first name" required>
+                    </div>
+                    <div id="item">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="last name" required>
+                    </div><br>
+                    <div id="item">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@Example.com" required>
+                    </div>
+                </div>
+               
+                <div class="radio-btn">
+                    <h4> Card Type</h4>
+                    <label for="credit-card"><input type="radio" id="credit-card" value="credit-card" name="paymethod" checked onclick="displayPaymentMethod()"> Credit Card</label>
+
+                   
+                    <label for="debit-card"><input type="radio" id="debit-card" value="debit-card" name="paymethod" onclick="displayPaymentMethod()">Debit Card</label>
+
+                    
+                    <label for="upi"><input type="radio" id="upi" value="upi" name="paymethod" onclick="displayPaymentMethod()">UPI </label>
+
+                </div>
+                
+                <div class="paymentDetail">
+
+                    <!-- credit card -->
+                    <label for="nameOnCard">Name on card</label><br>
+                    <input type="text" id="nameOnCard"><br>
+                    <label for="creditCardNumber">Credit Card Number</label><br>
+                    <input type="number" id="creditCardNumber"><br>
+                    <div>
+                        <label for="expiry">Expiry</label><br>
+                        <input type="date" id="expiry" required><br>
+                        <label for="cvv">CVV</label><br>
+                        <input type="password" id="cvv" required>
+                    </div>
+
+                    <!-- debit card -->
+                    <!-- <label for="nameOnCard">Name on card</label><br>
+                    <input type="text" id="nameOnCard"><br>
+                    <label for="debitCardNumber">Debit Card Number</label><br>
+                    <input type="number" id="debitCardNumber"><br>
+                    <div>
+                        <label for="expiry">Expiry</label><br>
+                        <input type="date" id="expiry"><br>
+                        <label for="cvv">CVV</label><br>
+                        <input type="password" id="cvv">
+                    </div> -->
+
+                    <!-- upi -->
+                    <!-- <label for="upi-id">UPI ID</label>
+                    <input type="text" id="upi-id" placeholder="xyz@abcbank">
+                    <button>Verify UPI ID</button> -->
+                </div>
+                <button class="submit payment-btn" id="sumbit">Proceed To Pay</button>
+            </form>
+        </div>
     </main>
+
+    <div class="back-button">
+        <a href="index.html"><button id="back">Back</button></a>
+    </div>
 </body>
 </html>
