@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies as per your mood</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- ------------- Navigation Bar  --------- -->
+  <nav class="nav-bar">
+    <div>
+
+      <!-- <h2 class="logo">Movie as per your Mood</h2> -->
+      <img src="https://i.ibb.co/7tBFRdw/mapm-logo-orange.png" alt="Logo" class="logo" srcset="" />
+    </div>
+
+    <!-- search bar without icon-->
+    <form action="" id="form" class="nosubmit">
+      <input class="nosubmit" type="text" class="search-box" id="search" placeholder="Movie, Actor, Category" />
+    </form>
+
+    <!-- search bar with icon -->
+
+    <!-- empty div for centering the navigation bar -->
+    <div class="menu-icon">☰</div>
+  </nav>
+
+  <div class="main">
+    <!-- ------------- Side Bar  ----------- -->
+    <sidebar class="sidebar s-hidden">
+      <div class="category-container" id="tag">
+        <!-- <div class="tag">Action</div>-->
+      </div>
+    </sidebar>
+
+    <!-- ------------- Main content  ----------- -->
+    <div class="container"></div>
+
+    <!----------- Modal content -------->
+
+    <!-- new modal popup -->
+    <div class="pop-modal" id="popup-modal">
+      <div class="popup-container">
+          <div class="pop-img-con">
+            <img class="pop-img" src="https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg" alt="">
+          </div>
+          <div class="pop-text-con">
+            <span class="pop-close">&times;</span>
+            <h2 class="pop-title">Black Panther: Wakanda Forever</h2>
+            <h3 class="pop-lan">Language: <span class="pop-languages orange-color"> En</span></h3>
+            <p class="pop-dec">Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.</p>
+            <p class="pop-ratings">Rating: <span id="rating-num" class="orange-color">7.5/10</span> </p>
+            <div class="rat-add">
+              <p class="pop-price">Price: ₹<span class="price-num"> 402</span></p>
+              <div id="booking">
+                
+              </div>
+              <!-- <button class="pop-add-to-cart" id="buy-button">Book Tickets</button>  -->
+            </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</body>
+
+</html>

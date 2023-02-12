@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+
+}
+
+body{
+    background-color: #000;
+}
+.navigation{
+    background-color: #231f2c;
+}
+
+#back{
+    color: black;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.logo{
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom:10px;
+}
+a:link{
+    text-decoration: none;
+    color: green;
+}
+a:visited{
+    text-decoration: none;
+    color: green;
+}
+
+.main {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+h2{
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    font-size: 3rem;
+}
+.summary, .paymentMethod {
+    border: 1px solid #f5f1ff;
+    background-color: #231f2c;
+    border-radius: 15px;
+}
+.summary{
+    width: 25%;
+    padding: 1%;
+    font-weight: bold;
+    position:static;
+}
+.paymentMethod {
+    padding: 1%;
+    line-height: 0.5;
+}
+.summary h3{
+    text-align: center;
+    font-size: 20px;
+}
+.summary .movie-name, .price, .ticketCount, .fee, .total{
+    padding: 3px;
+} 
+.summary .movie-name{
+    color: goldenrod;
+    font-size: 20px;
+    text-shadow:1px 1px 1px red;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.ticketCount{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 7px;
+}
+.ticketCount input{
+    color: black;
+}
+.fee{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+
+
+form h3{
+    text-align: center;
+}
+form input{
+    color: black;
+}
+form button{
+    color: black;
+    width: 95%;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+.paymentDetail{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.paymentDetail div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#inputItem{
+    display: flex;
+   }
+   #inputItem input{
+       width: 60%;
+   }
+   #item{
+       display: flex;
+      
+   }
+   #item label{
+       padding: 5px;
+   }
+   @media screen and (max-width: 900px) {
+       .ticketCount input {
+           color: black;
+           width: 50%;
+       }
+     }
+
+     @media screen and (max-width: 768px) {
+        
+      }
+      @media screen and (max-width: 600px) {
+        
+      }
+      .radio-btn {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        /* justify-content: center; */
+        align-items: flex-start;
+        padding:10px 0;
+    }
+
+    .payment-btn{
+        width: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: #ff5733;
+        color: #fff;
+        font-weight: bold;
+        margin: 5px 0;
+    }
