@@ -294,6 +294,11 @@ cursor: pointer;
   }
 }
 
+.popup-container{
+ width: 90%;
+  
+}
+
 /*------------ for Mobile device ----------- */
 @media (max-width: 425px) {
   .card {
@@ -303,4 +308,11 @@ cursor: pointer;
   .icon {
     display: block;
   }
+  
+  .popup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+}
+
