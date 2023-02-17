@@ -292,12 +292,13 @@ cursor: pointer;
   .card {
     width: calc(33% - 20px);
   }
+  
+  .popup-container{
+   width: 90%;
+  }
 }
 
-.popup-container{
- width: 90%;
-  
-}
+
 
 /*------------ for Mobile device ----------- */
 @media (max-width: 425px) {
