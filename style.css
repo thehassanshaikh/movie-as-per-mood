@@ -90,6 +90,7 @@ input.search-box {
   margin: 10px;
   box-shadow: 0 1px 6px 1px rgb(255 255 255 / 25%);
   border-bottom: 2px solid #eb5333;
+  height:fit-content;
 }
 
 .card-img {
