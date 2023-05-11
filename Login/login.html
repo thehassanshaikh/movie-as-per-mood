@@ -10,16 +10,18 @@
     <section class="login-container">
         <div class="login-sec">
             <h2>Login</h2>
-            <form>
+            <form method="POST" action="/">
                 <label for="username">Username</label>
-                <input type="text" class="sing-inpt" name="username"placeholder="username or Email">
+                <input type="text" class="sing-inpt" id="usr" name="username"placeholder="username or Email">
                 <br>
                 <label for="password">Password</label>
-                <input type="password" name="password" class="sing-inpt" placeholder="Password">
+                <input type="password" name="password" id="pwd" class="sing-inpt" placeholder="Password">
                 <br>
-                <button class="log-btn" type="submit">Log In</button>
+              <button class="log-btn" type="submit" >Log In</button>
             </form>
         </div>
     </section>
+
+    <script src="login.js"></script>
 </body>
 </html>
