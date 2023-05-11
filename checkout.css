@@ -168,3 +168,22 @@ form button{
         font-weight: bold;
         margin: 5px 0;
     }
+
+
+    /* Footer CSS */
+
+.footer-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border-top: 1px solid #323232;
+    color: white;
+  }
+  .footer-icon {
+    padding: 15px 30px;
+    font-size: 24px;
+    color: white;
+  }
+  

@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
     rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="script.js" defer></script>
@@ -29,6 +35,8 @@
     <form action="" id="form" class="nosubmit">
       <input class="nosubmit" type="text" class="search-box" id="search" placeholder="Movie, Actor, Category" />
     </form>
+
+    <i class="fa-solid fa-user footer-icon"></i>
 
     <!-- search bar with icon -->
 
@@ -52,26 +60,38 @@
     <!-- new modal popup -->
     <div class="pop-modal" id="popup-modal">
       <div class="popup-container">
-          <div class="pop-img-con">
-            <img class="pop-img" src="https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg" alt="">
-          </div>
-          <div class="pop-text-con">
-            <span class="pop-close">&times;</span>
-            <h2 class="pop-title">Black Panther: Wakanda Forever</h2>
-            <h3 class="pop-lan">Language: <span class="pop-languages orange-color"> En</span></h3>
-            <p class="pop-dec">Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.</p>
-            <p class="pop-ratings">Rating: <span id="rating-num" class="orange-color">7.5/10</span> </p>
-            <div class="rat-add">
-              <p class="pop-price">Price: ₹<span class="price-num"> 402</span></p>
-              <div id="booking">
-                
-              </div>
-              <!-- <button class="pop-add-to-cart" id="buy-button">Book Tickets</button>  -->
+        <div class="pop-img-con">
+          <img class="pop-img" src="https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg" alt="">
+        </div>
+        <div class="pop-text-con">
+          <span class="pop-close">&times;</span>
+          <h2 class="pop-title"></h2>
+          <h3 class="pop-lan">Language: <span class="pop-languages orange-color"> En</span></h3>
+          <p class="pop-dec"></p>
+          <p class="pop-ratings">Rating: <span id="rating-num" class="orange-color"></span> </p>
+          <div class="rat-add">
+            <p class="pop-price">Price: ₹<span class="price-num"></span></p>
+            <div id="booking">
+
             </div>
+            <!-- <button class="pop-add-to-cart" id="buy-button">Book Tickets</button>  -->
           </div>
+        </div>
       </div>
+    </div>
   </div>
-  </div>
+  <footer>
+    <div class="footer-icons">
+      <ul>
+        <i class="fa-brands fa-facebook footer-icon"></i>
+        <i class="fa-brands fa-linkedin footer-icon"></i>
+        <i class="fa-brands fa-twitter footer-icon"></i>
+        <i class="fa-brands fa-github footer-icon"></i>
+      </ul>
+      <p>© 2023 by the <a href="https://github.com/thehassanshaikh">Hassan Shaikh</a></p>
+    </div>
+
+  </footer>
 </body>
 
 </html>
