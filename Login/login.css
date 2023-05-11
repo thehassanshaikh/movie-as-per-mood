@@ -1,0 +1,39 @@
+*{
+    font-family: "Source Sans Pro", sans-serif;
+}
+label {
+    display: block;
+}
+
+body {
+    background-color: black;
+
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-sec {
+    background-color: #ff5733;
+    padding: 30px;
+    width: 15%;
+
+}
+
+input.sing-inpt {
+    padding: 5%;
+    margin: 4% 0;
+    border: none;
+    width: 90%;
+}
+
+.log-btn {
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
